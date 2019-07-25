@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/about', 'AboutController@index');
+
+Route::get('/employees','EmployeesController@show');
+Route::post('/employees','EmployeesController@create');
+Route::post('/employees/{employee}/delete','EmployeesController@delete');
+Route::get('/employees/{employee}/edit','EmployeesController@edit');
+Route::post('/employees/{employee}/update','EmployeesController@update');
